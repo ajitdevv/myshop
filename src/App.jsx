@@ -1,7 +1,11 @@
-
+import Header from "./components/header.jsx";
+import Product from "./components/Product.jsx";
 function App() {
   return (
-   <div className="flex"><h1>rfsfg</h1></div>
+    <>
+      <Header />
+      <Product />
+    </>
   );
 }
 
