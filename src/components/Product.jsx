@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { additem, removeitem } from "../redux/slice";
 import { useEffect } from "react";
-import fetchproducts from "../redux/dummyproducts";
+// import fetchproducts from "../redux/dummyproducts";
 
 const products = [
   {
@@ -616,9 +616,9 @@ const products = [
 ];
 export default function Product() {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchproducts());
-  }, []);
+//   useEffect(() => {
+//     dispatch(fetchproducts());
+//   }, []); 
   return (
     <div className="min-h-screen bg-gray-800 p-6">
       <div className="grid grid-cols-3 max-sm:grid-cols-1 gap-6 mt-8">
@@ -628,7 +628,7 @@ export default function Product() {
             className="bg-white p-4 w-fit rounded-lg shadow-md"
           >
             <img
-              src={product.image}
+              src="{product.image}"
               className="rounded-lg drop-shadow-lg"
               alt={product.name}
               onError={(e) => {
