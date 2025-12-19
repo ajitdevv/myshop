@@ -10,7 +10,7 @@ export const fetchProducts = createAsyncThunk('products', async () => {
 
 
 const initialState = {
-    items: [],
+    items:[],
     status: "idle",
     error: null,
 }
@@ -21,7 +21,7 @@ const products = createSlice({
     extraReducers: (builder) => {
         builder.addCase(fetchProducts.fulfilled, (state, action) => {
             state.status = "succeeded",
-                state.items = action.payload
+            state.items = action.payload
         }
         )
     }
