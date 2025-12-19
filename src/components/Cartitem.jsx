@@ -5,7 +5,7 @@ function Cartitem() {
   console.log(cartSlector);
   return (
     <section id="cart" className="w-full h-full bg-gray-800 text-white ">
-      <div className="container flex flex-row justify-center items-center w-full mt-20">
+      <div className="container flex flex-row justify-center items-center w-full ">
         {cartSlector.length > 0 ? (
           <div className="grid grid-cols-1 w-full gap-6 mt-20 p-6">
             {cartSlector.map((item) => (
