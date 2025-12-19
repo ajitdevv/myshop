@@ -1,18 +1,17 @@
-import { useDispatch } from "react-redux";
 import Header from "./components/header.jsx";
 import Product from "./components/Product.jsx";
-import { removeallitems } from "./redux/slice.js";
- function App() {
-  const dispatch = useDispatch();
+import Cartitem from "./components/Cartitem.jsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+function App() {
   return (
     <>
       <Header />
-      <div className="w-full h-full flex justify-center items-start bg-gray-800">
-        <button onClick={()=>dispatch(removeallitems(0))} className="bg-gray-900  hover:bg-gray-950 mt-15  text-white px-4 py-2 rounded">
-          clear cart
-        </button>
-      </div>
-      <Product />
+
+      <Routes>
+        <Route path="/" element={<Header />} />
+        <Route path="/cart" element={<Cartitem />} />
+        <Route path="/products" element={<Product />} />
+      </Routes>
     </>
   );
 }
