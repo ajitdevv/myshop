@@ -11,7 +11,7 @@ function Cartitem() {
             {cartSlector.map((item) => (
               <div
                 key={item.id}
-                className="bg-white flex p-4 h-50 w-full items-center     rounded-lg shadow-md text-black"
+                className="bg-white flex p-4 h-50 w-full items-center rounded-lg shadow-md text-black"
               >
                 <div className="">
                   <img className="size-40" src={item.thumbnail} alt={item.title} />
