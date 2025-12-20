@@ -4,7 +4,10 @@ function Cartitem() {
   const cartSlector = useSelector((state) => state.cart.items);
   console.log(cartSlector);
   return (
-    <section id="cart" className="w-full h-full bg-gray-800 text-white ">
+    <section
+      id="cart"
+      className="w-full flex flex-col items-center h-full bg-gray-800 text-white "
+    >
       <div className="container flex flex-row justify-center items-center w-full ">
         {cartSlector.length > 0 ? (
           <div className="grid grid-cols-1 w-full gap-6 mt-20 p-6">
@@ -14,10 +17,15 @@ function Cartitem() {
                 className="bg-white flex justify-between p-4 h-50 w-full items-center rounded-lg shadow-md text-black"
               >
                 <div className="">
-                  <img className="size-40" src={item.thumbnail} alt={item.title} />
+                  <img
+                    className="size-40"
+                    src={item.thumbnail}
+                    alt={item.title}
+                  />
                   <h1 className="text-black text-2xl">{item.title}</h1>
                 </div>
-                <div>
+                <div className="flex gap-2">
+                    <input type="number" className="bg-blue-200 hover:border p-2 hover:border-amber-500 rounded-2xl " />
                   <h2 className="text-xl font-semibold">${item.price}</h2>
                 </div>
               </div>
@@ -25,8 +33,9 @@ function Cartitem() {
           </div>
         ) : null}
       </div>
-      <div className="text-bold bg-green-300 flex items-start">
-        Total : {cartSlector.reduce((sum,item)=>sum+item.price,0)}
+
+      <div className="text-bold bg-green-300 p-5 rounded-4xl mb-2 flex flex-row items-start">
+        Total : ${cartSlector.reduce((sum, item) => sum + item.price, 0)}
       </div>
     </section>
   );
