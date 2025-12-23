@@ -1,16 +1,28 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { removeitem, removeallitems } from "../redux/slice";
+import { useNavigate } from "react-router-dom";
 
 function Cartitem() {
   const cartSlector = useSelector((state) => state.cart.items);
   const [cartitems, setCartitems] = useState(cartSlector);
-
+  const nagitive = useNavigate();
+  useEffect(() => {
+    setCartitems(cartSlector);
+  });
+  const removeAllitems = () => {
+    localStorage.clear();
+    dispatch(removeallitems());
+    nagitive("/products");
+  };
+  const dispatch = useDispatch();
   const productCount = (id, q) => {
     let quantity = parseInt(q) > 1 ? parseInt(q) : 1;
     const cartTampItems = cartSlector.map((item) => {
       return item.id === id ? { ...item, quantity } : item;
     });
     setCartitems(cartTampItems);
+    console.log(cartTampItems);
   };
   return (
     <section
@@ -45,7 +57,7 @@ function Cartitem() {
                       ${(item.price * (item.quantity || 1)).toLocaleString(2)}
                     </h2>
                     <button
-                      // onClick={() => dispatch(removeitem(product))}
+                      onClick={() => dispatch(removeitem(item))}
                       className="mt-4 font-bold bg-red-600 text-white px-4 py-2 rounded  shadow-xs"
                     >
                       Remove item
@@ -58,11 +70,20 @@ function Cartitem() {
         ) : null}
       </div>
 
-      <div className="text-bold bg-green-300 p-5 rounded-4xl mb-2 flex flex-row items-start">
-        Total : $
-        {cartitems
-          .reduce((sum, item) => sum + item.price * (item.quantity || 1), 0)
-          .toLocaleString(2)}
+      <div className="flex justify-around items-center mb-2 w-full">
+        <button
+          onClick={removeAllitems}
+          className="mt-4 font-bold bg-red-600 text-white px-4 py-2 rounded  shadow-xs"
+        >
+          Remove item
+        </button>
+        <h1 className=" bg-green-300 text-bold p-3 rounded-4xl  flex flex-row items-start">
+          {" "}
+          Total : $
+          {cartitems
+            .reduce((sum, item) => sum + item.price * (item.quantity || 1), 0)
+            .toLocaleString(2)}
+        </h1>
       </div>
     </section>
   );

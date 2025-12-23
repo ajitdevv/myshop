@@ -11,8 +11,6 @@ const additems = createSlice({
     initialState,
     reducers: {
         additem: (state, action) => {
-            // state.value += 1;
-            // console.log(action.payload)
             state.items.push(action.payload)
             localStorage.setItem("products", JSON.stringify(state.items))
 
@@ -27,7 +25,6 @@ const additems = createSlice({
         },
         removeallitems: (state) => {
             state.items = [];
-            localStorage.removeItem("products")
         },
     }
 })
