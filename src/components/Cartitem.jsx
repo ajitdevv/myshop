@@ -12,7 +12,7 @@ function Cartitem() {
   });
   const removeAllitems = () => {
     localStorage.clear();
-    dispatch(removeallitems());
+    // dispatch(removeallitems());
     nagitive("/products");
   };
   const dispatch = useDispatch();
