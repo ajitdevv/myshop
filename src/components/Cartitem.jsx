@@ -13,7 +13,7 @@ function Cartitem() {
   const removeAllitems = () => {
     localStorage.clear();
     dispatch(removeallitems());
-    nagitive("/products");
+    // nagitive("/products");
   };
   const dispatch = useDispatch();
   const productCount = (id, q) => {
