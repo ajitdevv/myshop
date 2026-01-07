@@ -1,4 +1,5 @@
 import AddToCart from "../Components/AddToCart.jsx";
+import ToggleButton from "../Components/ToggleButton.jsx";
 import { Link } from "react-router-dom";
 import Product from "./Product.jsx";
 function Header() {
@@ -19,6 +20,7 @@ function Header() {
         </div>
         {/* <!-- Cart --> */}
         <div>
+          <ToggleButton />
           <AddToCart />
         </div>
       </header>
