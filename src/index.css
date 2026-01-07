@@ -51,55 +51,111 @@
    MODERN E-COMMERCE COLOR SYSTEM
    60% Background | 30% Surfaces | 10% CTA
 ================================ */
-
+    /* 
     :root {
-        /* 60% — Background */
-        --background: #F8FAFC;
-        --foreground: #0F172A;
+        60% — Background
+    --background: #F8FAFC;
+    --foreground: #0F172A;
 
-        /* 30% — Cards / Sections */
-        --card: #FFFFFF;
-        --border: #E5E7EB;
+    30% — Cards / Sections
+    --card: #FFFFFF;
+    --border: #E5E7EB;
 
-        /* 10% — Primary CTA / Brand */
-        --primary: #2563EB;
-        --primary-foreground: #FFFFFF;
+    10% — Primary CTA / Brand
+    --primary: #2563EB;
+    --primary-foreground: #FFFFFF;
 
-        /* Accent (Offers / Success / Highlights) */
-        --accent: #22C55E;
+    Accent (Offers / Success / Highlights)
+    --accent: #22C55E;
 
-        /* Muted Text */
-        --muted: #64748B;
+    Muted Text
+    --muted: #64748B;
 
-        /* Shadow */
-        --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-    }
+    Shadow
+    --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
 
-    /* ================================
+/* ================================
    DARK MODE
 ================================ */
+    /*
+.dark {
+    60% — Background
+    --background: #020617;
+    --foreground: #F8FAFC;
+
+    30% — Cards / Sections
+    --card: #0F172A;
+    --border: #1E293B;
+
+    10% — Primary CTA / Brand
+    --primary: #3B82F6;
+    --primary-foreground: #020617;
+
+    Accent
+    --accent: #22C55E;
+
+    Muted Text
+    --muted: #94A3B8;
+
+    Shadow
+    --shadow: 0 14px 40px rgba(0, 0, 0, 0.65);
+}
+
+*/
+    /* ======================================
+   NEXT-GEN MODERN E-COMMERCE PALETTE
+   60% Base | 30% Surface | 10% Accent
+====================================== */
+    
+    :root {
+        /* 60% — Base (Warm Luxury White) */
+        --background: #FAFAF9;
+        --foreground: #18181B;
+
+        /* 30% — Elevated Surfaces */
+        --card: #FFFFFF;
+        --border: #E4E4E7;
+
+        /* 10% — Brand / CTA (Luxury Violet-Blue) */
+        --primary: #6366F1;
+        --primary-foreground: #FFFFFF;
+
+        /* Accent — Premium Highlight (Soft Gold) */
+        --accent: #F59E0B;
+
+        /* Muted / Subtle Text */
+        --muted: #71717A;
+
+        /* Soft Premium Shadow */
+        --shadow: 0 20px 40px rgba(24, 24, 27, 0.10);
+    }
+
+    /* ======================================
+   DARK MODE — PREMIUM & CINEMATIC
+====================================== */
 
     .dark {
-        /* 60% — Background */
-        --background: #020617;
-        --foreground: #F8FAFC;
+        /* 60% — Base */
+        --background: #0B0D12;
+        --foreground: #FAFAFA;
 
-        /* 30% — Cards / Sections */
-        --card: #0F172A;
-        --border: #1E293B;
+        /* 30% — Surfaces */
+        --card: #111827;
+        --border: #1F2937;
 
-        /* 10% — Primary CTA / Brand */
-        --primary: #3B82F6;
-        --primary-foreground: #020617;
+        /* 10% — CTA / Brand */
+        --primary: #818CF8;
+        --primary-foreground: #0B0D12;
 
-        /* Accent */
-        --accent: #22C55E;
+        /* Accent — Gold Highlight */
+        --accent: #FBBF24;
 
-        /* Muted Text */
-        --muted: #94A3B8;
+        /* Muted */
+        --muted: #9CA3AF;
 
-        /* Shadow */
-        --shadow: 0 14px 40px rgba(0, 0, 0, 0.65);
+        /* Deep Shadow */
+        --shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
     }
 
     * {

@@ -1,18 +1,18 @@
-import AddToCart from "./AddToCart.jsx";
+import AddToCart from "../Components/AddToCart.jsx";
 import { Link } from "react-router-dom";
 import Product from "./Product.jsx";
 function Header() {
   return (
     <>
-      <header className="flex fixed top-0 right-0 w-full mb-20 z-100 flex-row justify-between items-center p-4 bg-blue-600 text-white">
+      <header className="flex fixed top-0 right-0 w-full z-100 flex-row justify-between items-center px-2 bg-background shadow-md text-Foreground">
         {/* <!-- Logo --> */}
-        <div className="">
+        <div className="flex items-center font-bold text-2xl">
           <span className="">🛍️</span>
-          MyShop
+          <span className="ml-2 text-accent">MyShop</span>
         </div>
         {/* <!-- Navigation --> */}
         <div>
-          <nav className="flex gap-4 *:hover:underline">
+          <nav className="flex gap-4 *:font-bold *:hover:underline">
             <Link to="/">Home</Link>
             <Link to="/products">Products</Link>
           </nav>
@@ -22,7 +22,6 @@ function Header() {
           <AddToCart />
         </div>
       </header>
-     
     </>
   );
 }

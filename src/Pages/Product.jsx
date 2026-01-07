@@ -13,7 +13,7 @@ export default function Product() {
   const [button, setbutton] = useState(true);
   const slector = useSelector((state) => state.products.items);
   return (
-    <div className="min-h-screen bg-gray-800 p-6">
+    <div className="min-h-screen bg-background p-6">
       <div className="grid grid-cols-3 max-sm:grid-cols-1 mt-20 gap-6">
         {slector.map((product) => (
           <div
