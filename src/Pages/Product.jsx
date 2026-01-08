@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { additem, removeitem } from "../redux/slice";
 import { useEffect, useState } from "react";
 import { fetchProducts } from "../redux/dummyproducts";
-import RemoveItemButton, {AddItemButton} from "../Componenets/Button.jsx";
+import { RemoveItemButton, AddItemButton } from "../Componenets/Button.jsx";
 
 export default function Product() {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ export default function Product() {
   }, []);
 
   const cartproduct = useSelector((state) => state.cart.items);
-  const [button, setbutton] = useState(true);
+  // const [button, setbutton] = useState(true);
   const slector = useSelector((state) => state.products.items);
   return (
     <section className="min-h-screen bg-background p-6">
@@ -33,26 +33,17 @@ export default function Product() {
             <h2 className="text-xl font-semibold">{product.title}</h2>
             <h3 className="text-lg ">{product.description}</h3>
             <p className="text-gray-700">₹{product.price}</p>
-            {cartproduct.find(
-              (cartitem) => cartitem.id === product.id) ? (
-                // <button   onClick={() => dispatch(removeitem(product))}
-                //   className="mt-4 font-bold bg-red-600 text-white px-4 py-2 rounded  shadow-xs"
-                   
-                // >
-                //  Remove from cart 
-                // </button>
-                <RemoveItemButton onClick={() => dispatch(removeitem(product))} text="Remove item" />
-              ) : (
-                // <button
-                //   onClick={() => dispatch(additem(product))}
-                 
-                //   className="mt-4 font-bold bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800 pointer-cursor shadow-xs"
-                // >
-                //   add to cart
-                // </button>
-                <AddItemButton onClick={()=> dispatch(additem(product))} text="Add to cart"/>
-              )
-            }
+            {cartproduct.find((cartitem) => cartitem.id === product.id) ? (
+              <RemoveItemButton
+                onClick={() => dispatch(removeitem(product))}
+                text="Remove item"
+              />
+            ) : (
+              <AddItemButton
+                onClick={() => dispatch(additem(product))}
+                text="Add to cart"
+              />
+            )}
           </div>
         ))}
       </div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeitem, removeallitems } from "../redux/slice";
 import { useNavigate } from "react-router-dom";
-import RemoveItemButton, { ButtonN } from "../Componenets/Button";
+import { RemoveItemButton, ButtonN } from "../Componenets/Button";
 
 function Cartitem() {
   const cartSlector = useSelector((state) => state.cart.items);
@@ -23,7 +23,6 @@ function Cartitem() {
       return item.id === id ? { ...item, quantity } : item;
     });
     setCartitems(cartTampItems);
-    console.log(cartTampItems);
   };
   return (
     <section
