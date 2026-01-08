@@ -1,7 +1,9 @@
 import Header from "./Pages/header.jsx";
 import Product from "./Pages/Product.jsx";
 import Cartitem from "./Pages/Cartitem.jsx";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Cartlayouts from "./layouts/cartlayouts.jsx";
+import OrderPage from "./Pages/Order.jsx";
+import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 function App() {
   return (
@@ -10,7 +12,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cartitem />} />
+        <Route path="/cart" element={<Cartlayouts />}>
+          <Route index element={<Cartitem />} />
+          <Route path="order" element={<OrderPage />} />
+        </Route>
         <Route path="/products" element={<Product />} />
       </Routes>
     </>
