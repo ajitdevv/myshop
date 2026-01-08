@@ -1,11 +1,11 @@
-import CartCheck from "../Componenets/CartCheck.jsx";
-import ToggleButton from "../Componenets/ThemeToggleButton.jsx";
+import AddToCart from "./AddToCart.jsx";
+import ToggleButton from "./ThemeToggleButton.jsx";
 import { Link } from "react-router-dom";
-// import Product from "../Pages/Product.jsx";
-function header() {
+import Product from "../Pages/Product.jsx";
+function nav() {
   return (
     <>
-      <nav className="flex fixed top-0 right-0 w-full z-100 flex-row justify-between items-center px-2 bg-background shadow-(--shadow) text-Foreground">
+      <nav className="flex fixed top-0 right-0 w-full z-100 flex-row justify-between items-center px-2 bg-background shadow-md text-Foreground">
         {/* <!-- Logo --> */}
         <div className="flex items-center font-bold text-2xl">
           <span className="">🛍️</span>
@@ -19,12 +19,12 @@ function header() {
           </nav>
         </div>
         {/* <!-- Cart --> */}
-        <div className="flex gap-2">
+        <div>
           <ToggleButton />
-          <CartCheck />
+          <AddToCart />
         </div>
       </nav>
     </>
   );
 }
-export default header;
+export default nav;

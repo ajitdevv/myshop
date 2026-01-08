@@ -10,7 +10,9 @@
     --color-accent: var(--accent);
     --color-primary-foreground: var(--primary-foreground);
     --color-card: var(--card);
+    --color-inner-card: var(--inner-card);
     --color-muted: var(--muted);
+    --color-danger: var(--danger);
 
     --color-shadow: var(--shadow);
 
@@ -107,7 +109,7 @@
    NEXT-GEN MODERN E-COMMERCE PALETTE
    60% Base | 30% Surface | 10% Accent
 ====================================== */
-    
+
     :root {
         /* 60% — Base (Warm Luxury White) */
         --background: #FAFAF9;
@@ -116,7 +118,7 @@
         /* 30% — Elevated Surfaces */
         --card: #FFFFFF;
         --border: #E4E4E7;
-
+        --inner-card: #d0d0d0;
         /* 10% — Brand / CTA (Luxury Violet-Blue) */
         --primary: #6366F1;
         --primary-foreground: #FFFFFF;
@@ -127,6 +129,8 @@
         /* Muted / Subtle Text */
         --muted: #71717A;
 
+
+        --danger: #EF4444;
         /* Soft Premium Shadow */
         --shadow: 0 20px 40px rgba(24, 24, 27, 0.10);
     }
@@ -141,8 +145,9 @@
         --foreground: #FAFAFA;
 
         /* 30% — Surfaces */
-        --card: #111827;
+        --card: #101f3f;
         --border: #1F2937;
+        --inner-card: #052978;
 
         /* 10% — CTA / Brand */
         --primary: #818CF8;
@@ -154,8 +159,10 @@
         /* Muted */
         --muted: #9CA3AF;
 
+
+        --danger: #EF4444;
         /* Deep Shadow */
-        --shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
+        --shadow: 0 20px 40px rgba(255, 255, 255, 0.10);
     }
 
     * {
@@ -197,6 +204,10 @@
     * {
         scrollbar-width: thin;
         scrollbar-color: var(--accent) var(--background);
+        transition:
+            background-color 0.7s ease,
+            color 0.7s ease,
+            border-color 0.7s ease;
     }
 
 

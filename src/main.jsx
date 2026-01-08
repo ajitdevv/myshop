@@ -9,7 +9,7 @@ import store from "./redux/Store";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <App className="transition-colors duration-700" />
     </BrowserRouter>
   </Provider>
 );

@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { additem, removeitem } from "../redux/slice";
 import { useEffect, useState } from "react";
 import { fetchProducts } from "../redux/dummyproducts";
+import RemoveItemButton, {AddItemButton} from "../Componenets/Button.jsx";
 
 export default function Product() {
   const dispatch = useDispatch();
@@ -13,12 +14,12 @@ export default function Product() {
   const [button, setbutton] = useState(true);
   const slector = useSelector((state) => state.products.items);
   return (
-    <div className="min-h-screen bg-background p-6">
+    <section className="min-h-screen bg-background p-6">
       <div className="grid grid-cols-3 max-sm:grid-cols-1 mt-20 gap-6">
         {slector.map((product) => (
           <div
             key={product.id}
-            className="bg-white p-4 w-fit rounded-lg shadow-md"
+            className="bg-card p-4 w-fit rounded-lg shadow-md"
           >
             <img
               src={product.thumbnail}
@@ -34,25 +35,27 @@ export default function Product() {
             <p className="text-gray-700">₹{product.price}</p>
             {cartproduct.find(
               (cartitem) => cartitem.id === product.id) ? (
-                <button   onClick={() => dispatch(removeitem(product))}
-                  className="mt-4 font-bold bg-red-600 text-white px-4 py-2 rounded  shadow-xs"
+                // <button   onClick={() => dispatch(removeitem(product))}
+                //   className="mt-4 font-bold bg-red-600 text-white px-4 py-2 rounded  shadow-xs"
                    
-                >
-                 Remove from cart 
-                </button>
+                // >
+                //  Remove from cart 
+                // </button>
+                <RemoveItemButton onClick={() => dispatch(removeitem(product))} text="Remove item" />
               ) : (
-                <button
-                  onClick={() => dispatch(additem(product))}
+                // <button
+                //   onClick={() => dispatch(additem(product))}
                  
-                  className="mt-4 font-bold bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800 pointer-cursor shadow-xs"
-                >
-                  add to cart
-                </button>
+                //   className="mt-4 font-bold bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800 pointer-cursor shadow-xs"
+                // >
+                //   add to cart
+                // </button>
+                <AddItemButton onClick={()=> dispatch(additem(product))} text="Add to cart"/>
               )
             }
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
