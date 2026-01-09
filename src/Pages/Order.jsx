@@ -1,7 +1,13 @@
 import OrderForm from "../Componenets/OrderForm";
 function OrderPage() {
-    return <div>
+  return (
+    <section className="mt-17">
+      <div></div>
+
+      <div>
         <OrderForm />
-    </div>;
+      </div>
+    </section>
+  );
 }
 export default OrderPage;

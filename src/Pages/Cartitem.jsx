@@ -7,15 +7,10 @@ import { RemoveItemButton, ButtonN } from "../Componenets/Button";
 function Cartitem() {
   const cartSlector = useSelector((state) => state.cart.items);
   const [cartitems, setCartitems] = useState(cartSlector);
-  const nagitive = useNavigate();
+ 
   useEffect(() => {
     setCartitems(cartSlector);
   }, [cartSlector]);
-  const removeAllitems = () => {
-    localStorage.clear();
-    dispatch(removeallitems());
-    nagitive("/products");
-  };
   const dispatch = useDispatch();
   const productCount = (id, q) => {
     let quantity = parseInt(q) > 1 ? parseInt(q) : 1;
@@ -24,6 +19,10 @@ function Cartitem() {
     });
     setCartitems(cartTampItems);
   };
+  const navigate = useNavigate(); 
+  const Handelorderpage=()=>{
+    navigate("/cart/order");
+  }
   return (
     <section
       id="cart"
@@ -56,12 +55,6 @@ function Cartitem() {
                     <h2 className="text-xl font-semibold">
                       ${(item.price * (item.quantity || 1)).toLocaleString(2)}
                     </h2>
-                    {/* <button
-                      onClick={() => dispatch(removeitem(item))}
-                      className="mt-4 font-bold bg-red-600 text-white px-4 py-2 rounded  shadow-xs"
-                    >
-                      Remove item
-                    </button> */}
                     <RemoveItemButton
                       onClick={() => dispatch(removeitem(item))}
                       text="Remove item"
@@ -83,7 +76,7 @@ function Cartitem() {
         </h1>
       </div>
       <div className="flex justify-around items-center mb-2 w-full">
-        <ButtonN text="Order" />
+        <ButtonN onClick={Handelorderpage} text="Order" />
       </div>
     </section>
   );
