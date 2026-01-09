@@ -18,7 +18,6 @@ const additems = createSlice({
         removeitem: (state,action) => {
            const cartProducts = state.items.filter((items)=>items.id !==action.payload.id)
             state.items=cartProducts
-            // localStorage.removeItem("products", JSON.stringify(state.items))
               localStorage.setItem("products", JSON.stringify(state.items));
 
 

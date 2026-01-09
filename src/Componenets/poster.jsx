@@ -8,17 +8,15 @@ function Poster({ slides }) {
   const nextSlide = () => {
     setMove((move) => (move === slides.length - 1 ? 0 : move + 1));
   };
-  useEffect(()=>{
-    const interval = setInterval (()=>{
-        setMove((move)=>
-           move === slides.length - 1? 0 : move+1
-        ) ;
-    },3000)
-    return()=> clearInterval(interval);
-  },[slides.length])
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setMove((move) => (move === slides.length - 1 ? 0 : move + 1));
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
   return (
     <div className="mt-25 flex flex-col justify-center items-center">
-      <div className=" border-foreground relative h-100 lg:h-110 w-[90%] border-2 overflow-hidden rounded-lg">
+      <div className="border-foreground relative h-76 md:h-96 lg:h-110 w-[90%] border-2 overflow-hidden rounded-lg">
         <div
           className="flex transition-transform duration-500"
           style={{ transform: `translateX(-${move * 100}%)` }}
@@ -34,12 +32,16 @@ function Poster({ slides }) {
           ))}
         </div>
         <div className="w-full h-full flex justify-between items-center">
-          <button onClick={prevSlide} className="absolute left-2 top-1/2 -translate-y-1/2 text-accent"
-       >
+          <button
+            onClick={prevSlide}
+            className="absolute left-2 top-1/2 -translate-y-1/2 text-accent"
+          >
             <ArrowLeftIcon />
           </button>
-          <button onClick={nextSlide} className="absolute right-2 top-1/2 -translate-y-1/2 text-accent"
-       >
+          <button
+            onClick={nextSlide}
+            className="absolute right-2 top-1/2 -translate-y-1/2 text-accent"
+          >
             <ArrowRightIcon />
           </button>
         </div>

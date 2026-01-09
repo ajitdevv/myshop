@@ -1,7 +1,6 @@
 import CartCheck from "../Componenets/CartCheck.jsx";
 import ToggleButton from "../Componenets/ThemeToggleButton.jsx";
 import { Link } from "react-router-dom";
-// import Product from "../Pages/Product.jsx";
 function header() {
   return (
     <>
