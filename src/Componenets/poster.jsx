@@ -1,9 +1,50 @@
-const Porster = () => {
+import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
+import { useEffect, useState } from "react";
+function Poster({ slides }) {
+  const [move, setMove] = useState(0);
+  const prevSlide = () => {
+    setMove((move) => (move === 0 ? slides.length - 1 : move - 1));
+  };
+  const nextSlide = () => {
+    setMove((move) => (move === slides.length - 1 ? 0 : move + 1));
+  };
+  useEffect(()=>{
+    const interval = setInterval (()=>{
+        setMove((move)=>
+           move === slides.length - 1? 0 : move+1
+        ) ;
+    },3000)
+    return()=> clearInterval(interval);
+  },[slides.length])
   return (
-    <div className="mt-20 flex border-foreground h-40 w-[80%] border-2 rounded-lg">
-      <div></div>
-      
+    <div className="mt-25 flex flex-col justify-center items-center">
+      <div className=" border-foreground h-100 w-[90%] border-2 overflow-hidden rounded-lg">
+        <div
+          className="flex transition-transform duration-500"
+          style={{ transform: `translateX(-${move * 100}%)` }}
+        >
+          {slides.map((slide, index) => (
+            <div key={index} className="w-full flex-shrink-0">
+              <img
+                src={slide}
+                className="w-full h-full object-cover"
+                alt={`slide-${index}`}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="w-full h-full flex justify-between items-center">
+          <button onClick={prevSlide} className="absolute left-10 top-1/2 -translate-y-1/2 text-accent"
+       >
+            <ArrowLeftIcon />
+          </button>
+          <button onClick={nextSlide} className="absolute right-10 top-1/2 -translate-y-1/2 text-accent"
+       >
+            <ArrowRightIcon />
+          </button>
+        </div>
+      </div>
     </div>
   );
-};
-export default Porster;
+}
+export default Poster;
