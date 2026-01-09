@@ -9,7 +9,7 @@ function Home(){
 return(
     <div>
         <Poster slides={slides}/>
-        {/* <Product /> */}
+        <Product />
     </div>
 )
 }

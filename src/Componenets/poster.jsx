@@ -18,7 +18,7 @@ function Poster({ slides }) {
   },[slides.length])
   return (
     <div className="mt-25 flex flex-col justify-center items-center">
-      <div className=" border-foreground h-100 w-[90%] border-2 overflow-hidden rounded-lg">
+      <div className=" border-foreground relative h-100 lg:h-110 w-[90%] border-2 overflow-hidden rounded-lg">
         <div
           className="flex transition-transform duration-500"
           style={{ transform: `translateX(-${move * 100}%)` }}
@@ -27,18 +27,18 @@ function Poster({ slides }) {
             <div key={index} className="w-full flex-shrink-0">
               <img
                 src={slide}
-                className="w-full h-full object-cover"
+                className="cover object-cover"
                 alt={`slide-${index}`}
               />
             </div>
           ))}
         </div>
         <div className="w-full h-full flex justify-between items-center">
-          <button onClick={prevSlide} className="absolute left-10 top-1/2 -translate-y-1/2 text-accent"
+          <button onClick={prevSlide} className="absolute left-2 top-1/2 -translate-y-1/2 text-accent"
        >
             <ArrowLeftIcon />
           </button>
-          <button onClick={nextSlide} className="absolute right-10 top-1/2 -translate-y-1/2 text-accent"
+          <button onClick={nextSlide} className="absolute right-2 top-1/2 -translate-y-1/2 text-accent"
        >
             <ArrowRightIcon />
           </button>
