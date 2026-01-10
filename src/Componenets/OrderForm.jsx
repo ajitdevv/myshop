@@ -12,19 +12,18 @@ const OrderForm = () => {
     }
 
   return (
-    <div className="bg-card w-[40%] text-foreground px-4 pb-4 pt-6">
-      <form action="" className="flex flex-col gap-4 ">
+    <div className="bg-card w-full lg:w-[40%] text-foreground px-4 pb-4 pt-6">
+      <form action="" className="flex flex-col w-full gap-4 ">
         <div className="flex gap-5 ">
           <input
-            className="bg-inner-card p-2"
+            className="bg-inner-card w-[50%] p-2"
             type="text"
-            // required
+            required
             placeholder="Enter your First Name"
           />
           <input
-            className="bg-inner-card p-2"
+            className="bg-inner-card w-[45%] p-2"
             type="text"
-            // required
             placeholder="Enter your Last Name"
           />
         </div>
@@ -36,13 +35,13 @@ const OrderForm = () => {
         />
         <div className="flex gap-5">
           <input
-            className="bg-inner-card p-2"
+            className="bg-inner-card w-[50%] p-2"
             type="number"
             required
             placeholder="Enter your number"
           />
           <input
-            className="bg-inner-card p-2"
+            className="bg-inner-card w-[45%] p-2"
             type="number"
             required
             placeholder="Pincode"

@@ -84,7 +84,7 @@ function Cartitem() {
       <div className="flex justify-between lg:justify-around bg-card  items-center w-full  fixed bottom-0 px-7 py-4 ">
         {cartitems.length >= 1 ? (
           <div>
-            <h1 className=" bg-inner-card text-bold px-3 py-2 rounded-4xl  ">
+            <h1 className=" bg-inner-card text-bold mt-4 px-3 py-2 rounded-4xl  ">
               Total : $
               {cartitems
                 .reduce(
@@ -96,7 +96,7 @@ function Cartitem() {
           </div>
         ) : null}
         {cartitems.length >= 1 ? (
-          <div >
+          <div>
             <ButtonN
               onClick={Handelorderpage}
               className="shadow-(--shadow) w-full "
