@@ -19,31 +19,45 @@ export default function Product() {
         {slector.map((product) => (
           <div
             key={product.id}
-            className="bg-card p-4 w-fit rounded-lg shadow-md"
+            className="flex flex-col bg-card p-4 w-fit rounded-lg shadow-md"
           >
-            <img
-              src={product.thumbnail}
-              className="rounded-lg drop-shadow-lg"
-              alt={product.name}
-              onError={(e) => {
-                e.target.src = "https://via.placeholder.com/300";
-              }}
-            />
-            <h1 className="font-bold text-black">reating : {product.rating}</h1>
-            <h2 className="text-xl font-semibold">{product.title}</h2>
-            <h3 className="text-lg ">{product.description}</h3>
-            <p className="text-gray-700">₹{product.price}</p>
-            {cartproduct.find((cartitem) => cartitem.id === product.id) ? (
-              <RemoveItemButton
-                onClick={() => dispatch(removeitem(product))}
-                text="Remove item"
+            <div>
+              <img
+                src={product.thumbnail}
+                className="rounded-lg drop-shadow-lg"
+                alt={product.name}
+                onError={(e) => {
+                  e.target.src = "https://via.placeholder.com/300";
+                }}
               />
-            ) : (
-              <AddItemButton
-                onClick={() => dispatch(additem(product))}
-                text="Add to cart"
-              />
-            )}
+            </div>
+            <hr />
+            <div className="flex flex-col items-start  my-2">
+              <h2 className="text-xl text-foreground font-semibold">
+                {product.title}
+              </h2>
+              <h1 className="font-bold text-foreground">
+                reating : {product.rating}
+              </h1>
+              <h3 className=" text-justify text-foreground">{product.description}</h3>
+              <p className="text-nuted bg-inner-card py-1 mt-1 px-2 rounded-lg">₹ {product.price}</p>
+            </div>
+            <hr />
+            <div>
+              {cartproduct.find((cartitem) => cartitem.id === product.id) ? (
+                <RemoveItemButton
+                  onClick={() => dispatch(removeitem(product))}
+                  className="w-[95%]"
+                  text="Remove item"
+                />
+              ) : (
+                <AddItemButton
+                  onClick={() => dispatch(additem(product))}
+                  className="w-[95%]"
+                  text="Add to cart"
+                />
+              )}
+            </div>
           </div>
         ))}
       </div>

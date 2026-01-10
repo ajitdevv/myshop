@@ -7,7 +7,7 @@ import { RemoveItemButton, ButtonN } from "../Componenets/Button";
 function Cartitem() {
   const cartSlector = useSelector((state) => state.cart.items);
   const [cartitems, setCartitems] = useState(cartSlector);
- 
+
   useEffect(() => {
     setCartitems(cartSlector);
   }, [cartSlector]);
@@ -19,16 +19,16 @@ function Cartitem() {
     });
     setCartitems(cartTampItems);
   };
-  const navigate = useNavigate(); 
-  const Handelorderpage=()=>{
+  const navigate = useNavigate();
+  const Handelorderpage = () => {
     navigate("/cart/order");
-  }
+  };
   return (
     <section
       id="cart"
       className="w-full flex flex-col items-center h-full bg-background text-fourground "
     >
-      <div className="container flex flex-row justify-center items-center w-full ">
+      <div className=" flex flex-row justify-center items-center w-full ">
         {cartitems.length > 0 ? (
           <div className="grid grid-cols-1 w-full gap-6 mt-20 p-6">
             {cartitems.map((item) => (
@@ -55,6 +55,7 @@ function Cartitem() {
                     <h2 className="text-xl font-semibold">
                       ${(item.price * (item.quantity || 1)).toLocaleString(2)}
                     </h2>
+
                     <RemoveItemButton
                       onClick={() => dispatch(removeitem(item))}
                       text="Remove item"
@@ -65,19 +66,24 @@ function Cartitem() {
               </div>
             ))}
           </div>
-        ) : null}
+        ) : <h1 className="text-5xl text-foreground mt-40 font-bold">No Items Are Avalible in Cart 😒😒
+          </h1>}
       </div>
-      <div>
-        <h1 className=" bg-card text-bold p-3 rounded-4xl  flex flex-row items-start">
-          Total : $
-          {cartitems
-            .reduce((sum, item) => sum + item.price * (item.quantity || 1), 0)
-            .toLocaleString(2)}
-        </h1>
-      </div>
-      <div className="flex justify-around items-center mb-2 w-full">
-        <ButtonN onClick={Handelorderpage} text="Order" />
-      </div>
+      {cartitems.length >= 1 ? (
+        <div>
+          <h1 className=" bg-card text-bold p-3 rounded-4xl  flex flex-row items-start">
+            Total : $
+            {cartitems
+              .reduce((sum, item) => sum + item.price * (item.quantity || 1), 0)
+              .toLocaleString(2)}
+          </h1>
+        </div>
+      ) : null}{" "}
+      {cartitems.length >= 1 ? (
+        <div className="flex justify-around items-center mb-2 w-full">
+          <ButtonN onClick={Handelorderpage} text="Order" />
+        </div>
+      ) : null}
     </section>
   );
 }

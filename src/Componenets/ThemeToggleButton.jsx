@@ -2,24 +2,22 @@ import { useEffect, useState } from "react";
 function ThemeToggleButton() {
   const [Theme, setTheme] = useState(localStorage.getItem("Theme") === "dark");
 
-  useEffect(()=>{
-    if(Theme){
+  useEffect(() => {
+    if (Theme) {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("Theme","dark");
-    }else{
+      localStorage.setItem("Theme", "dark");
+    } else {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("Theme","light");
+      localStorage.setItem("Theme", "light");
     }
-  })
+  });
   const themeToggle = () => {
     setTheme(!Theme);
-  }
+  };
   return (
     <div>
       <button onClick={themeToggle} className="mt-6">
-       {
-        Theme ? "🌙" : "☀️"
-       }
+        {Theme ? "🌙" : "☀️"}
       </button>
     </div>
   );
