@@ -3,8 +3,10 @@ import Product from "./Pages/Product.jsx";
 import Cartitem from "./Pages/Cartitem.jsx";
 import Cartlayouts from "./layouts/cartlayouts.jsx";
 import OrderPage from "./Pages/Order.jsx";
+import ProductDetail from "./Componenets/ProductDetail.jsx";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
+import ProductDetailLayout from "./layouts/ProductDetailLayout.jsx";
 function App() {
   return (
     <>
@@ -16,7 +18,10 @@ function App() {
           <Route index element={<Cartitem />} />
           <Route path="order" element={<OrderPage />} />
         </Route>
-        <Route path="/products" element={<Product />} />
+        <Route path="/products" element={<ProductDetailLayout />}>
+          <Route index element={<Product />} />
+          <Route path=":id" element={<ProductDetail />} />
+        </Route>
       </Routes>
     </>
   );

@@ -2,17 +2,29 @@ import { useDispatch, useSelector } from "react-redux";
 import { additem, removeitem } from "../redux/slice";
 import { useEffect, useState } from "react";
 import { fetchProducts } from "../redux/dummyproducts";
-import { RemoveItemButton, AddItemButton } from "../Componenets/Button.jsx";
+import {
+  RemoveItemButton,
+  AddItemButton,
+  Buttonn,
+} from "../Componenets/Button.jsx";
+import { useNavigate } from "react-router-dom";
 
 export default function Product() {
   const dispatch = useDispatch();
+  const navigation = useNavigate();
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
 
   const cartproduct = useSelector((state) => state.cart.items);
-  // const [button, setbutton] = useState(true);
   const slector = useSelector((state) => state.products.items);
+  const handleItemDetails = (id) => {
+     if (!id) {
+    console.error("Product id missing");
+    return;
+  }
+    navigation(`/products/${id}`);
+  };
   return (
     <section className="min-h-screen bg-background p-6">
       <div className="grid grid-cols-3 max-sm:grid-cols-1 mt-20 gap-6">
@@ -22,14 +34,16 @@ export default function Product() {
             className="flex flex-col bg-card p-4 w-fit rounded-lg shadow-md"
           >
             <div>
-              <img
-                src={product.thumbnail}
-                className="rounded-lg drop-shadow-lg"
-                alt={product.name}
-                onError={(e) => {
-                  e.target.src = "https://via.placeholder.com/300";
-                }}
-              />
+              <Buttonn onClick={() => handleItemDetails(product.id)} className="cursor-pointer">
+                <img
+                  src={product.thumbnail}
+                  className="rounded-lg drop-shadow-lg hover:scale-105 transition-all duration-300"
+                  alt={product.name}
+                  onError={(e) => {
+                    e.target.src = "https://via.placeholder.com/300";
+                  }}
+                />
+              </Buttonn>
             </div>
             <hr />
             <div className="flex flex-col items-start  my-2">
@@ -39,8 +53,12 @@ export default function Product() {
               <h1 className="font-bold text-foreground">
                 reating : {product.rating}
               </h1>
-              <h3 className=" text-justify text-foreground">{product.description}</h3>
-              <p className="text-nuted bg-inner-card py-1 mt-1 px-2 rounded-lg">₹ {product.price}</p>
+              <h3 className=" text-justify text-foreground">
+                Click on image to view more details
+              </h3>
+              <p className="text-nuted bg-inner-card py-1 mt-1 px-2 rounded-lg">
+                ₹ {product.price}
+              </p>
             </div>
             <hr />
             <div>

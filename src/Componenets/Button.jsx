@@ -30,7 +30,17 @@ export const ButtonN = ({ onClick, text = "Button", className = "" }) => {
       onClick={onClick}
       className={`mt-4 font-bold bg-accent text-foreground px-4 py-2 rounded  shadow-xs ${className}`}
     >
-      {text}
+     {text}
+    </button>
+  );
+};
+export const Buttonn = ({ onClick, text, children, className = "" }) => {
+  return (
+    <button
+      onClick={onClick}
+      className={` px-4 py-2 rounded  shadow-xs ${className}`}
+    >
+      {children ? children : text}
     </button>
   );
 };
