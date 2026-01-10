@@ -22,7 +22,7 @@ function Poster({ slides }) {
           style={{ transform: `translateX(-${move * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <div key={index} className="w-full flex-shrink-0">
+            <div key={index} className="w-full shrink-0">
               <img
                 src={slide}
                 className="cover object-cover"

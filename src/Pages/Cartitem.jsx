@@ -31,7 +31,7 @@ function Cartitem() {
     >
       <div className=" flex flex-row justify-center items-center w-full ">
         {cartitems.length > 0 ? (
-          <div className="grid grid-cols-1 w-full gap-6 my-20 p-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-6 my-20 p-6">
             {cartitems.map((item) => (
               <div
                 key={item.id}
@@ -76,7 +76,7 @@ function Cartitem() {
             ))}
           </div>
         ) : (
-          <h1 className="text-5xl text-foreground mt-40 font-bold">
+          <h1 className="text-5xl w-full h-full flex justify-center items-center text-foreground mt-70 font-bold">
             No Items Are Avalible in Cart 😒😒
           </h1>
         )}

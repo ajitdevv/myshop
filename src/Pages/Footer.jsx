@@ -1,0 +1,81 @@
+import { Buttonn } from "../Componenets/Button";
+
+const Footer = () => {
+  return (
+    <footer className="bg-card w-full text-foreground border-t border-border">
+      {/* Top Section */}
+      <div
+        className="w-full mx-auto px-6 py-12 grid 
+                      grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+      >
+        {/* Brand */}
+        <div>
+          <h2 className="text-2xl font-bold text-primary">🛍️MyShop</h2>
+          <p className="mt-3 text-sm text-muted leading-relaxed">
+            Your one-stop destination for quality products, best prices, and
+            fast delivery.
+          </p>
+        </div>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="font-semibold mb-4">Quick Links</h3>
+          <ul className="space-y-2 text-sm text-muted">
+            <li className="hover:text-primary cursor-pointer">Home</li>
+            <li className="hover:text-primary cursor-pointer">Products</li>
+            <li className="hover:text-primary cursor-pointer">Cart</li>
+            <li className="hover:text-primary cursor-pointer">Checkout</li>
+          </ul>
+        </div>
+
+        {/* Customer Support */}
+        <div>
+          <h3 className="font-semibold mb-4">Customer Support</h3>
+          <ul className="space-y-2 text-sm text-muted">
+            <li className="hover:text-primary cursor-pointer">Help Center</li>
+            <li className="hover:text-primary cursor-pointer">Returns</li>
+            <li className="hover:text-primary cursor-pointer">Shipping</li>
+            <li className="hover:text-primary cursor-pointer">
+              Privacy Policy
+            </li>
+          </ul>
+        </div>
+
+        {/* Newsletter */}
+        <div>
+          <h3 className="font-semibold mb-4">Stay Updated</h3>
+          <p className="text-sm text-muted mb-3">
+            Subscribe to get special offers & updates.
+          </p>
+
+          <div className="flex lg:flex-col gap-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-3 py-2 rounded-lg bg-inner-card
+                         border border-border outline-none
+                         focus:ring-2 focus:ring-primary"
+            />
+           <Buttonn text="Subscribe" className="px-4 bg-accent py-2" />
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-border py-4 px-6">
+        <div
+          className="max-w-7xl mx-auto flex flex-col sm:flex-row
+                        items-center justify-between gap-2 text-sm text-muted"
+        >
+          <p>© {new Date().getFullYear()} ShopEase. All rights reserved.</p>
+          <p className="flex gap-4">
+            <span className="hover:text-primary cursor-pointer">Terms</span>
+            <span className="hover:text-primary cursor-pointer">Privacy</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

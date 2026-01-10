@@ -7,6 +7,7 @@ import ProductDetail from "./Componenets/ProductDetail.jsx";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import ProductDetailLayout from "./layouts/ProductDetailLayout.jsx";
+import Footer from "./Pages/Footer.jsx";
 function App() {
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
           <Route path=":id" element={<ProductDetail />} />
         </Route>
       </Routes>
+      <Footer />
     </>
   );
 }

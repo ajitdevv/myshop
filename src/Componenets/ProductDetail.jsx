@@ -60,7 +60,8 @@ const ProductDetail = () => {
             </div>
           </div>
           <div className="flex w-full flex-col-reverse gap-6 lg:flex-row">
-            <div className="w-[50%] ">
+            <div className="flex flex-col items-start lg:w-[50%] ">
+              <h1 className="font-bold">Reviews:</h1>
               {product.reviews
                 ? product.reviews.map((review) => {
                     return (
@@ -86,7 +87,9 @@ const ProductDetail = () => {
                   })
                 : "No reviews yet."}
             </div>
-            <div className="w-[50%] flex flex-col gap-10">
+
+            <div className="lg:w-[50%] flex flex-col gap-10">
+              <hr />
               <div>
                 {cartproduct.find((cartitem) => cartitem.id === product.id) ? (
                   <RemoveItemButton
@@ -102,9 +105,10 @@ const ProductDetail = () => {
                   />
                 )}
               </div>
+              <hr />
               <div className="flex flex-col text-foreground items-start pl-3">
                 <h1 className="text-2xl font-bold mb-5">
-                  {" "}
+                
                   Meta Information :-
                 </h1>
                 <h2>Product ID : {product.id}</h2>
@@ -112,6 +116,7 @@ const ProductDetail = () => {
                 <h2>Updated AT : {product.meta.updatedAt.slice(0, 10)}</h2>
                 <h2>Barcode : {product.meta.barcode}</h2>
               </div>
+              <hr />
             </div>
           </div>
         </div>
