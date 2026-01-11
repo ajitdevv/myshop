@@ -72,7 +72,7 @@ const OrderForm = () => {
   return (
    
       <div className=" w-full lg:w-[50%] text-foreground mr-2">
-        {showSuccess && <SuccessPopup />}
+        {showSuccess && <SuccessPopup h2="🎉 Order Placed!" p1="Thank you for your order" p2="Redirecting..." />}
         <form onSubmit={handleSubmit} className="flex bg-card mt-10 px-4 rounded-xl py-4 flex-col w-full gap-4">
           {/* First & Last Name */}
           <div className="flex gap-5">
