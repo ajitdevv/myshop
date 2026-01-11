@@ -54,7 +54,7 @@ export default function Product() {
                 {product.title}
               </h2>
               <h1 className="font-bold text-foreground">
-                reating : {product.rating}
+                Rating : {product.rating}
               </h1>
               <h3 className=" text-justify text-foreground">
                 Click on image to view more details
