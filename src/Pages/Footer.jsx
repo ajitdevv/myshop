@@ -10,7 +10,7 @@ const Footer = () => {
       >
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold text-primary">🛍️MyShop</h2>
+          <h2 className="text-2xl font-bold ">🛍️<span className="text-accent">MyShop</span></h2>
           <p className="mt-3 text-sm text-muted leading-relaxed">
             Your one-stop destination for quality products, best prices, and
             fast delivery.
