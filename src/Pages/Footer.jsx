@@ -48,7 +48,7 @@ const Footer = () => {
             Subscribe to get special offers & updates.
           </p>
 
-          <div className="flex lg:flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <input
               type="email"
               placeholder="Enter your email"
