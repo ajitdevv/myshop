@@ -6,7 +6,7 @@ function Header() {
 <>
       <nav className="flex fixed top-0 right-0 w-full z-100 flex-row justify-between items-center px-2 bg-background shadow-(--shadow) text-Foreground">
       
-        <div className="flex items-center font-bold text-2xl">
+        <div className="flex items-center font-bold lg:text-2xl">
         <span className="">🛍️</span>
           <span className="ml-2 text-accent">MyShop</span>
         </div>
