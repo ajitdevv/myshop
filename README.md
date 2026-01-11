@@ -107,7 +107,7 @@ src/
 ## ⚙️ Local Setup
 
 ```bash
-git clone https://github.com/ajitdevv/myshop.git
+git clone https://github.com/ajitdevv/myshop
 cd myshop
 npm install
 npm run dev
