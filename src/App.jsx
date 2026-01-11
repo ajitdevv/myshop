@@ -4,6 +4,7 @@ import Cartitem from "./Pages/Cartitem.jsx";
 import Cartlayouts from "./layouts/cartlayouts.jsx";
 import OrderPage from "./Pages/Order.jsx";
 import ProductDetail from "./Componenets/ProductDetail.jsx";
+import NotFoundPage from "./Pages/NotFoundPage.jsx";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import ProductDetailLayout from "./layouts/ProductDetailLayout.jsx";
@@ -23,6 +24,7 @@ function App() {
           <Route index element={<Product />} />
           <Route path=":id" element={<ProductDetail />} />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </>
