@@ -19,10 +19,10 @@ export default function Product() {
   const cartproduct = useSelector((state) => state.cart.items);
   const slector = useSelector((state) => state.products.items);
   const handleItemDetails = (id) => {
-     if (!id) {
-    console.error("Product id missing");
-    return;
-  }
+    if (!id) {
+      return;
+    }
+
     navigation(`/products/${id}`);
   };
   return (
@@ -34,7 +34,10 @@ export default function Product() {
             className="flex flex-col bg-card p-4 w-fit rounded-lg shadow-md"
           >
             <div>
-              <Buttonn onClick={() => handleItemDetails(product.id)} className="cursor-pointer">
+              <Buttonn
+                onClick={() => handleItemDetails(product.id)}
+                className="cursor-pointer"
+              >
                 <img
                   src={product.thumbnail}
                   className="rounded-lg drop-shadow-lg hover:scale-105 transition-all duration-300"
@@ -82,3 +85,4 @@ export default function Product() {
     </section>
   );
 }
+

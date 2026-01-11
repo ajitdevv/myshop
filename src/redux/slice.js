@@ -101,3 +101,6 @@ export default additems.reducer
 //  *       ],
 //  *       "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
 //  *   },]
+
+
+//! groceries , furniture, fragrances, beauty

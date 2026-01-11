@@ -34,7 +34,7 @@ export const ButtonN = ({ onClick, text = "Button", className = "" }) => {
     </button>
   );
 };
-export const Buttonn = ({ onClick, text, children, className = "" }) => {
+export const Buttonn = ({ onClick, text,  children, className = "" }) => {
   return (
     <button
       onClick={onClick}

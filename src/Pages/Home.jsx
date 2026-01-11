@@ -1,4 +1,5 @@
 import Product from "./Product";
+import FilteredProducts from "../Componenets/FilteredProducts.jsx";
 import Poster from "../Componenets/poster.jsx";
 import poster1 from "../assets/Homepagee/1.png";
 import poster2 from "../assets/Homepagee/2.png";
@@ -12,7 +13,11 @@ function Home() {
         <Poster slides={slides} />
       </div>
       <div>
-        <Product />
+        {/* Products filterd by category */}
+        <FilteredProducts />
+      </div>
+      <div>
+        {/* <Product /> */}
       </div>
     </div>
   );
