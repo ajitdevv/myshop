@@ -7,23 +7,19 @@ const FilterCard = ({ h1, h2, h3, bgphoto }) => {
 
     }
   return (
-    <div className="bg-card grid grid-cols-2 w-[70%] gap-4 text-foreground border-(--border) rounded-lg p-4 shadow-md">
+    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2   gap-4 text-foreground  p-4 ">
       {bgphoto.map((photo, index) => {
         return (
-          <div key={index} className="border-(--border) h-100  ">
-            <div className=" rounded-2xl object-cover h-100 overflow-hidden ">
+          <div key={index} className=" h-100  ">
+            <div className=" rounded-2xl bg-card shadow object-cover hover:scale-110 transition duration-300 h-100 overflow-hidden ">
               <Buttonn onClick={() => HandilImageClick(photo.name)}>
                 <img
                   src={photo.photo}
-                  className="w-full object-cover  rounded-2xl"
+                  className="object-cover  rounded-2xl"
                   alt={`photo-${index}`}
                 />
               </Buttonn>
             </div>
-
-            <h1 className="">{h1}</h1>
-            <h2>{h2}</h2>
-            <h3>{h3}</h3>
           </div>
         );
       })}
