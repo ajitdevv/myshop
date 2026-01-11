@@ -7,7 +7,7 @@ const FilterCard = ({ h1, h2, h3, bgphoto }) => {
 
     }
   return (
-    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2   gap-4 text-foreground  p-4 ">
+    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 text-foreground  p-4 ">
       {bgphoto.map((photo, index) => {
         return (
           <div key={index} className=" h-100  ">

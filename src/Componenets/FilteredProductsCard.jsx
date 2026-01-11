@@ -25,9 +25,9 @@ const FilteredProducts = () => {
     { name: "groceries", photo: groceries },
   ];
   return (
-    <div className="w-full h-full flex flex-col gap-6 mt-6 p-6 items-start">
+    <div className="w-full h-full flex flex-col mt-6 p-6 items-start">
       <div>
-        <h1 className="text-4xl text-foreground font-semibold">Category Products </h1>
+        <h1 className="lg:text-4xl text-foreground font-semibold">Category Products </h1>
       </div>
       <div>
         <FilterCard bgphoto={bgphoto ? bgphoto : null} />
