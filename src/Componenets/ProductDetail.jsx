@@ -42,7 +42,7 @@ const ProductDetail = () => {
                 <h3>
                   {" "}
                   <span className="font-semibold">Brand: </span>
-                  {product.brand}
+                  {product.brand? (product.brand):("product brand not found")}
                 </h3>
                 <h3>Weight : {product.weight}gm</h3>
                 <h3>
