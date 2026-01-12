@@ -6,7 +6,6 @@ const ProductDetail = () => {
   const { id } = useParams();
   const numericId = parseInt(id, 10);
   const productDetails = useSelector((state) => state.products.items);
-
   const product = productDetails.find((p) => p.id === numericId);
   const cartproduct = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();

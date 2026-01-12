@@ -8,7 +8,7 @@ import { fetchProducts } from "../redux/dummyproducts";
 import { additem, removeitem } from "../redux/slice";
 const SearchFunclity = () => {
   const [search, setSearch] = useState("");
-  const [uisearch, setUisearch] = useState("");
+  const [uisearch,setUisearch]=useState("")
   const [searchresult, setsearchresult] = useState(false);
   const [finalproducts, setfinalproducts] = useState([]);
   const products = useSelector((state) => state.products.items);
@@ -28,7 +28,7 @@ const SearchFunclity = () => {
   };
   const HeandlSearch = () => {
     setsearchresult(true);
-    setUisearch(search);
+    setUisearch(search)
     const filterproduct = products.filter((e) =>
       e.tags?.some((tag) => tag.toLowerCase() === search.toLowerCase())
     );
@@ -61,10 +61,7 @@ const SearchFunclity = () => {
           (finalproducts.length > 0 ? (
             <div className="flex flex-col gap-3">
               <div className="flex flex-col mt-2 items-start">
-                <h1 className="lg:text-2xl">
-                  Result According to :{" "}
-                  <span className="bold ">{uisearch}</span>
-                </h1>
+                <h1 className="lg:text-2xl">Result According to : <span className="font-bold">{uisearch}</span></h1>
               </div>
               <div className="grid grid-cols-3 max-sm:grid-cols-1 mt-3  gap-6">
                 {finalproducts.map((product) => (
@@ -121,16 +118,12 @@ const SearchFunclity = () => {
                       )}
                     </div>
                   </div>
-                ))}{" "}
-                <hr className="mt-5" />
-                <hr />
+                ))}
               </div>
             </div>
           ) : (
-            <h1 className="flex items-start">
-              Product not found: <span className="font-bold">"{uisearch}"</span>{" "}
-              <hr className="mt-5" />
-              <hr />
+            <h1 className="flex items-start mt-3">
+              Product not found: <span className="font-bold">"{uisearch}"</span>
             </h1>
           ))}
       </div>
