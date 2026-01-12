@@ -4,7 +4,7 @@ function NotFoundPage() {
   return (
     <div className="w-full min-h-screen flex justify-center items-center mt-20">
       <img
-        className="max-w-100 w-full h-auto"
+        className="max-w-150 w-full h-auto"
         src={NotfoundImage}
         alt="404 - Page Not Found"
       />
