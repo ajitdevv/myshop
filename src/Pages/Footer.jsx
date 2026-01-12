@@ -5,8 +5,7 @@ const Footer = () => {
     <footer className="bg-card w-full text-foreground border-t border-border">
       {/* Top Section */}
       <div
-        className="w-full mx-auto px-6 py-12 grid 
-                      grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+        className="w-full mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
       >
         {/* Brand */}
         <div>
