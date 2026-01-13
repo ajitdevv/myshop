@@ -25,7 +25,7 @@ function Poster({ slides }) {
             <div key={index} className="w-full shrink-0">
               <img
                 src={slide}
-                className="cover object-cover"
+                className=" object-center object-cover"
                 alt={`slide-${index}`}
               />
             </div>
