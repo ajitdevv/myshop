@@ -30,7 +30,7 @@ const FilterItems = () => {
   };
   return (
     <section className="min-h-screen bg-background p-6">
-      <div className="grid grid-cols-3 max-sm:grid-cols-1 mt-20 gap-6">
+      <div className="grid grid-cols-3 max-sm:grid-cols-1  mt-20 gap-6">
         {filterproducts.map((product, index) => (
           <div
             key={`${product.id}-${index}`}

@@ -15,7 +15,7 @@ function Home() {
       <div>
         <FilteredProducts />
       </div>
-      <div>
+      <div className="-mt-20">
         <Product />
       </div>
     </div>

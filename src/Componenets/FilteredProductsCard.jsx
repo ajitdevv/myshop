@@ -21,8 +21,8 @@ const FilteredProducts = () => {
   const bgphoto = [
     { name: "beauty", photo: beauty },
     { name: "fragrances", photo: fragrances },
-    { name: "furniture", photo: furniture },
     { name: "groceries", photo: groceries },
+    { name: "furniture", photo: furniture },
   ];
   return (
     <div className="w-full h-full flex flex-col mt-6 p-6 items-start">
