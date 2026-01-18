@@ -41,10 +41,10 @@ const SearchFunclity = () => {
   };
   return (
     <section className="w-full flex flex-col justify-center">
-      <div className="flex gap-2 justify-center">
-        <div className="w-1/2">
+      <div className="flex gap-2 flex-row justify-center ">
+        <div className="w-[90%] lg:w-[30%]">
           <input
-            className="bg-inner-card w-full h-10 px-3 py-2 border-2  border-accent rounded-2xl "
+            className="bg-inner-card  w-full h-10 px-2 py-1 lg:px-3 lg:py-2 border-2  border-accent rounded-2xl "
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}

@@ -76,7 +76,7 @@ function Cartitem() {
             ))}
           </div>
         ) : (
-          <h1 className="text-5xl w-full h-full flex justify-center items-center text-foreground mt-70 font-bold">
+          <h1 className="text-3xl lg:text-5xl w-full h-full flex justify-center items-center text-foreground my-60 font-bold">
             No Items Are Avalible in Cart 😒😒
           </h1>
         )}

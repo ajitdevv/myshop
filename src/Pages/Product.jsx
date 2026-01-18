@@ -28,7 +28,7 @@ export default function Product() {
   };
   return (
     <section className="min-h-screen flex flex-col mt-20 justify-center gap-3 bg-background p-6">
-      <div className="w-full">
+      <div className="w-full ">
         <SearchFunclity />
       </div>
       <hr className="mt-5" />
