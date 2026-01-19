@@ -1,4 +1,4 @@
-import { Buttonn } from "../Componenets/Button";
+import { Buttonn } from "../Components/Button";
 
 const Footer = () => {
   return (

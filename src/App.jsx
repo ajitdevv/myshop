@@ -3,9 +3,9 @@ import Product from "./Pages/Product.jsx";
 import Cartitem from "./Pages/Cartitem.jsx";
 import Cartlayouts from "./layouts/cartlayouts.jsx";
 import OrderPage from "./Pages/Order.jsx";
-import ProductDetail from "./Componenets/ProductDetail.jsx";
+import ProductDetail from "./Components/ProductDetail.jsx";
 import NotFoundPage from "./Pages/NotFoundPage.jsx";
-import FilterItems from "./Componenets/FilterItems.jsx";
+import FilterItems from "./Components/FilterItems.jsx";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import ProductDetailLayout from "./layouts/ProductDetailLayout.jsx";
@@ -30,6 +30,7 @@ function App() {
       </Routes>
       <Footer />
     </>
+ 
   );
 }
 export default App;

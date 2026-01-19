@@ -1,5 +1,5 @@
-import OrderForm from "../Componenets/OrderForm";
-import OrderProduct from "../Componenets/OrderProduct.jsx";
+import OrderForm from "../Components/OrderForm.jsx";
+import OrderProduct from "../Components/OrderProduct.jsx";
 function OrderPage() {
   return (
     <section className="mt-17">

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { AddItemButton, RemoveItemButton } from "../Componenets/Button.jsx";
+import { AddItemButton, RemoveItemButton } from "./Button.jsx";
 import { additem, removeitem } from "../redux/slice.js";
 const ProductDetail = () => {
   const { id } = useParams();

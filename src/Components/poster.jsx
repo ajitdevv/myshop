@@ -11,7 +11,7 @@ function Poster({ slides }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setMove((move) => (move === slides.length - 1 ? 0 : move + 1));
-    }, 3000);
+    }, 8000);
     return () => clearInterval(interval);
   }, [slides.length]);
   return (

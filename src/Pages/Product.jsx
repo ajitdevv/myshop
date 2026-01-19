@@ -6,9 +6,9 @@ import {
   RemoveItemButton,
   AddItemButton,
   Buttonn,
-} from "../Componenets/Button.jsx";
+} from "../Components/Button.jsx";
 import { useNavigate } from "react-router-dom";
-import SearchFunclity from "../Componenets/SearchFunclity.jsx";
+import SearchFunclity from "../Components/SearchFunclity.jsx";
 
 export default function Product() {
   const dispatch = useDispatch();
