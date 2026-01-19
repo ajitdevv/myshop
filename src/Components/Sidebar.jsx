@@ -4,7 +4,7 @@ import SideManuContent from "../SideManulayouts/manucontent.jsx";
 const Sidemanu = () => {
   const [isopen, setisopen] = useState(true);
   return (
-    <section className="z-100 absolute right-0 top-0 bg- w-full">
+    <section className="z-25 absolute right-0 top-0">
       <div className="">
         <SidemanuButton setisopen={setisopen} open={isopen} />
       <SideManuContent open={isopen} />

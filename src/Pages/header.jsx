@@ -1,4 +1,4 @@
-import Sidemanu from "../Components/Sidebar.jsx";
+import Sidemanu from "../Components/Sidebar.jsx"
 import CartCheck from "../Components/CartCheck.jsx";
 import ToggleButton from "../Components/ThemeToggleButton.jsx";
 import { Link } from "react-router-dom";

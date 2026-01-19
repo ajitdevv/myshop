@@ -10,11 +10,11 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import ProductDetailLayout from "./layouts/ProductDetailLayout.jsx";
 import Footer from "./Pages/Footer.jsx";
+import SideManuContent from "./SideManulayouts/manucontent.jsx";
 function App() {
   return (
     <>
       <Header />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cartlayouts />}>
@@ -30,7 +30,6 @@ function App() {
       </Routes>
       <Footer />
     </>
- 
   );
 }
 export default App;

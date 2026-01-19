@@ -2,9 +2,10 @@ import { ButtonN } from "../Components/Button";
 import { Link } from "react-router-dom";
 const SideManuContent = ({ open }) => {
   return (
-    <div className="w-full flex justify-center mt-18 items-center">
+    <div className="w-full flex mt-18">
       {open ? (
-        <section className="h-full w-full bg-red-300">
+        <section className="h-full fixed inset-0   bg-red-300">
+          <div className="absolute right-0 top-19 w-full md:w-80 h-full">
           <div className="w-full">
             <nav className="flex flex-col w-full gap-4 *:font-bold*:hover:underline">
               <Link to="/">Home</Link>
@@ -13,7 +14,7 @@ const SideManuContent = ({ open }) => {
           </div>
           <div className="mb-4 w-full">
             <ButtonN text="Login" />
-          </div>
+          </div></div>
         </section>
       ) : null}
     </div>
