@@ -18,7 +18,11 @@ const SideManuContent = ({ setisopen, open }) => {
         `}
     >
       <div className="flex flex-col justify-center items-center mt-20">
-        <nav className="flex flex-col gap-4 p-6 font-bold">
+        <nav className="flex flex-col justify-center items-center gap-4 p-6 font-bold">
+          <div className="flex items-center font-bold lg:text-2xl">
+            <span className="">🛍️</span>
+            <span className="ml-2 text-accent">MyShop</span>
+          </div>
           <Link to="/" onClick={() => setisopen(false)}>
             Home
           </Link>
@@ -34,8 +38,9 @@ const SideManuContent = ({ setisopen, open }) => {
               Category Products <ArrowDown />
             </div>
           </Link>
+
           {Category ? (
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col bg-inner-card p-4 rounded-2xl gap-3 transition-transform duration-500 ease-in-out">
               <Link
                 to="/products/Category/beauty"
                 onClick={() => setisopen(false)}
@@ -66,19 +71,20 @@ const SideManuContent = ({ setisopen, open }) => {
           ) : (
             ""
           )}
+
           <Link to="/cart" onClick={() => setisopen(false)}>
             Cart
           </Link>
           <Link to="/about" onClick={() => setisopen(false)}>
             About
           </Link>
-          <Link to="/trem&conditions" onClick={() => setisopen(false)}>
+          <Link to="/terms&conditions" onClick={() => setisopen(false)}>
             Trem&conditions
           </Link>
+          <div className="p-6">
+            <ButtonN text="Login" />
+          </div>
         </nav>
-        <div className="p-6">
-          <ButtonN text="Login" />
-        </div>
       </div>
     </aside>
   );
