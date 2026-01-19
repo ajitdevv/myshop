@@ -7,7 +7,7 @@ const SideManuContent = ({ setisopen, open }) => {
   return (
     <aside
       className={`
-          fixed right-0 top-0 h-full w-full md:w-80 bg-red-300
+          fixed right-0 top-0 h-full w-full md:w-80 bg-card text-foreground
           transition-transform duration-500 ease-in-out
           ${open ? "translate-x-0" : "translate-x-full"}
         `}
