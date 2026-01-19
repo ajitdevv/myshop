@@ -3,6 +3,7 @@ import CartCheck from "../Components/CartCheck.jsx";
 import ToggleButton from "../Components/ThemeToggleButton.jsx";
 import { Link } from "react-router-dom";
 import { ButtonN } from "../Components/Button.jsx";
+import SearchFunclity from "../Components/SearchFunclity.jsx";
 function Header() {
   return (
     <>
