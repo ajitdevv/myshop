@@ -27,13 +27,20 @@ const SideManuContent = ({ setisopen, open }) => {
             </div>
           </Link>
           {Category ? (
-            <div>
-              <Link to="/" onClick={() => setisopen(false)}>
-                Home
+            <div className="flex flex-col gap-3">
+              <Link to="/products/Category/beauty" onClick={() => setisopen(false)}>
+                Beauty
               </Link>
 
-              <Link to="/products" onClick={() => setisopen(false)}>
-                Products
+              <Link to="/products/Category/fragrances" onClick={() => setisopen(false)}>
+                Fragrances
+              </Link>
+              <Link to="products/Category/groceries" onClick={() => setisopen(false)}>
+                Groceries
+              </Link>
+
+              <Link to="/products/Category/furniture" onClick={() => setisopen(false)}>
+                Furniture
               </Link>
             </div>
           ) : ''}
