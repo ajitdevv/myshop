@@ -1,23 +1,48 @@
+import { ArrowDown } from "lucide-react";
 import { ButtonN } from "../Components/Button";
 import { Link } from "react-router-dom";
-const SideManuContent = ({ open }) => {
+import { useState } from "react";
+const SideManuContent = ({ setisopen, open }) => {
+  const [Category, setCategory] = useState(false);
   return (
-    <div className="w-full flex mt-18">
-      {open ? (
-        <section className="h-full fixed inset-0   bg-red-300">
-          <div className="absolute right-0 top-19 w-full md:w-80 h-full">
-          <div className="w-full">
-            <nav className="flex flex-col w-full gap-4 *:font-bold*:hover:underline">
-              <Link to="/">Home</Link>
-              <Link to="/products">Products</Link>
-            </nav>
-          </div>
-          <div className="mb-4 w-full">
-            <ButtonN text="Login" />
-          </div></div>
-        </section>
-      ) : null}
-    </div>
+    <aside
+      className={`
+          fixed right-0 top-0 h-full w-full md:w-80 bg-red-300
+          transition-transform duration-500 ease-in-out
+          ${open ? "translate-x-0" : "translate-x-full"}
+        `}
+    >
+      <div className="flex flex-col justify-center items-center">
+        <nav className="flex flex-col gap-4 p-6 font-bold">
+          <Link to="/" onClick={() => setisopen(false)}>
+            Home
+          </Link>
+
+          <Link to="/products" onClick={() => setisopen(false)}>
+            Products
+          </Link>
+          <Link>
+            <div onClick={()=>setCategory((prev) => !prev)} className="flex gap-1">
+              Category Products <ArrowDown />
+            </div>
+          </Link>
+          {Category ? (
+            <div>
+              <Link to="/" onClick={() => setisopen(false)}>
+                Home
+              </Link>
+
+              <Link to="/products" onClick={() => setisopen(false)}>
+                Products
+              </Link>
+            </div>
+          ) : ''}
+        </nav>
+        <div className="p-6">
+          <ButtonN text="Login" />
+        </div>
+      </div>
+    </aside>
   );
 };
 export default SideManuContent;

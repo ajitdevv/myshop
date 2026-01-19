@@ -2,7 +2,7 @@ import { AlignRightIcon, X } from "lucide-react";
 import { Buttonn } from "../Components/Button";
 const SidemanuButton = ({ setisopen, open }) => {
   return (
-    <section className="mt-4 -ml-4 absolute right-0 top-0  z-20 size-10">
+    <section className="mt-4 -ml-4 absolute right-3 top-0  z-20 size-10">
       {open ? (
         <Buttonn
           onClick={() => {

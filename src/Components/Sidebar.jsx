@@ -7,7 +7,7 @@ const Sidemanu = () => {
     <section className="z-25 absolute right-0 top-0">
       <div className="">
         <SidemanuButton setisopen={setisopen} open={isopen} />
-      <SideManuContent open={isopen} />
+      <SideManuContent open={isopen} setisopen={setisopen}/>
    </div> </section>
   );
 };
