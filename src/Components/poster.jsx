@@ -18,33 +18,33 @@ function Poster({ slides }) {
     <div className="mt-21 flex flex-col justify-center items-center">
       <div className="border-foreground relative h-76 md:h-96 lg:h-110 w-[90%] border-2 overflow-hidden rounded-lg">
         <div
-          className="flex transition-transform duration-500"
+          className="flex transition-transform duration-500 h-full"
           style={{ transform: `translateX(-${move * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <div key={index} className="w-full shrink-0">
+            <div key={index} className="w-full h-full shrink-0">
               <img
                 src={slide}
-                className=" object-center object-cover"
                 alt={`slide-${index}`}
+                className="w-full h-full object-cover object-center"
               />
             </div>
           ))}
         </div>
-        <div className="w-full h-full flex justify-between items-center">
-          <button
-            onClick={prevSlide}
-            className="absolute left-2 top-1/2 -translate-y-1/2 text-accent"
-          >
-            <ArrowLeftIcon />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-2 top-1/2 -translate-y-1/2 text-accent"
-          >
-            <ArrowRightIcon />
-          </button>
-        </div>
+
+        <button
+          onClick={prevSlide}
+          className="absolute left-2 top-1/2 -translate-y-1/2 text-accent"
+        >
+          <ArrowLeftIcon />
+        </button>
+
+        <button
+          onClick={nextSlide}
+          className="absolute right-2 top-1/2 -translate-y-1/2 text-accent"
+        >
+          <ArrowRightIcon />
+        </button>
       </div>
     </div>
   );

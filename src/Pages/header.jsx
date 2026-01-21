@@ -1,9 +1,10 @@
-import Sidemanu from "../Components/Sidebar.jsx"
+import Sidemanu from "../Components/Sidebar.jsx";
 import CartCheck from "../Components/CartCheck.jsx";
 import ToggleButton from "../Components/ThemeToggleButton.jsx";
 import { Link } from "react-router-dom";
 import { ButtonN } from "../Components/Button.jsx";
 import SearchFunclity from "../Components/SearchFunclity.jsx";
+import { ArrowDown } from "lucide-react";
 function Header() {
   return (
     <>
@@ -13,21 +14,23 @@ function Header() {
             <span className="">🛍️</span>
             <span className="ml-2 text-accent">MyShop</span>
           </div>
-          <div>
+          <div className="flex gap-8 items-center">
             <nav className="flex gap-4 *:font-bold max-sm:hidden *:hover:underline">
               <Link to="/">Home</Link>
               <Link to="/products">Products</Link>
+              <Link to="/cart">Cart</Link>
+              <Link to="/aboutus">About</Link>
             </nav>
-          </div>
-          <div className="mb-4 max-sm:hidden ">
-            <ButtonN text="Login" />
+            <div className="mb-4 max-sm:hidden mr-1 ">
+              <ButtonN text="Login" />
+            </div>
           </div>
           <div className="flex gap-2">
             <ToggleButton />
             <CartCheck />
-          </div>{" "}
+          </div>
         </div>
-        <div className="lg:hidden">
+        <div className="lg:hidden md:hidden sm:hidden">
           <Sidemanu />
         </div>
       </nav>

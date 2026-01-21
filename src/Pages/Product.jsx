@@ -33,11 +33,11 @@ export default function Product() {
       </div>
       <hr className="mt-5" />
       <hr />
-      <div className="flex flex-col mt-10">
+      <div className="flex flex-col items-center mt-10">
         <div>
           <h1 className="lg:text-2xl mb-5 font-bold">All items </h1>
         </div>
-        <div className="grid grid-cols-3 max-sm:grid-cols-1  gap-6">
+        <div className="grid grid-cols-3 max-sm:grid-cols-1 items-center  gap-6">
           {slector.map((product) => (
             <div
               key={product.id}

@@ -44,7 +44,7 @@ const SearchFunclity = () => {
       <div className="flex gap-2 flex-row justify-center ">
         <div className="w-[90%] lg:w-[30%]">
           <input
-            className="bg-inner-card  w-full h-10 px-2 py-1 lg:px-3 lg:py-2 border-2  border-accent rounded-2xl "
+            className="bg-card  w-full h-10 px-2 py-1 lg:px-3 lg:py-2 border-2  border-accent rounded-2xl "
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -56,7 +56,7 @@ const SearchFunclity = () => {
             onClick={HeandlSearch}
             className="size-10 rounded-full flex items-center p-0 m-0 justify-center hover:scale-105 active:bg-inner-card border border-accent"
           >
-            <LucideSearch size={20} />
+            <LucideSearch size={20} color="var(--accent)" />
           </button>
         </div>
       </div>
