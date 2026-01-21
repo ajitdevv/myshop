@@ -1,15 +1,15 @@
 import { Buttonn } from "../Components/Button";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-card w-full text-foreground border-t border-border">
       {/* Top Section */}
-      <div
-        className="w-full mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
-      >
+      <div className="w-full mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold ">🛍️<span className="text-accent">MyShop</span></h2>
+          <h2 className="text-2xl font-bold ">
+            🛍️<span className="text-accent">MyShop</span>
+          </h2>
           <p className="mt-3 text-sm text-muted leading-relaxed">
             Your one-stop destination for quality products, best prices, and
             fast delivery.
@@ -20,22 +20,36 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-4">Quick Links</h3>
           <div className="space-y-2 flex flex-col gap-1 text-sm text-muted">
-            <Link to="/" className="hover:text-primary cursor-pointer">Home</Link>
-            <Link to="/oroducts" className="hover:text-primary cursor-pointer">Products</Link>
-            <Link to="/cart" className="hover:text-primary cursor-pointer">Cart</Link>
-            <Link to="/" className="hover:text-primary cursor-pointer">Checkout</Link>
+            <Link to="/" className="hover:text-primary cursor-pointer">
+              Home
+            </Link>
+            <Link to="/oroducts" className="hover:text-primary cursor-pointer">
+              Products
+            </Link>
+            <Link to="/cart" className="hover:text-primary cursor-pointer">
+              Cart
+            </Link>
+            <Link to="/" className="hover:text-primary cursor-pointer">
+              Checkout
+            </Link>
           </div>
         </div>
-        
 
         {/* Customer Support */}
         <div>
-          <h3 className="font-semibold flex flex-col gap-1 mb-4">Customer Support</h3>
+          <h3 className="font-semibold flex flex-col gap-1 mb-4">
+            Customer Support
+          </h3>
           <div className="space-y-2 text-sm text-muted">
-            <Link className="hover:text-primary cursor-pointer">Help Center</Link>
+            <Link className="hover:text-primary cursor-pointer">
+              Help Center
+            </Link>
             <Link className="hover:text-primary cursor-pointer">Returns</Link>
             <Link className="hover:text-primary cursor-pointer">Shipping</Link>
-            <Link to="/privacy-policy" className="hover:text-primary cursor-pointer">
+            <Link
+              to="/privacy-policy"
+              className="hover:text-primary cursor-pointer"
+            >
               Privacy Policy
             </Link>
           </div>
@@ -56,7 +70,7 @@ const Footer = () => {
                          border border-border outline-none
                          focus:ring-2 focus:ring-primary"
             />
-           <Buttonn text="Subscribe" className="px-4 bg-accent py-2" />
+            <Buttonn text="Subscribe" className="px-4 bg-accent py-2" />
           </div>
         </div>
       </div>

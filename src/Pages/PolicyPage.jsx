@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-background text-foreground px-4 py-10">
