@@ -20,23 +20,24 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-4">Quick Links</h3>
           <div className="space-y-2 flex flex-col gap-1 text-sm text-muted">
-            <a href="/" className="hover:text-primary cursor-pointer">Home</a>
-            <a href="/oroducts" className="hover:text-primary cursor-pointer">Products</a>
-            <a href="/cart" className="hover:text-primary cursor-pointer">Cart</a>
-            <a href="/" className="hover:text-primary cursor-pointer">Checkout</a>
+            <Link to="/" className="hover:text-primary cursor-pointer">Home</Link>
+            <Link to="/oroducts" className="hover:text-primary cursor-pointer">Products</Link>
+            <Link to="/cart" className="hover:text-primary cursor-pointer">Cart</Link>
+            <Link to="/" className="hover:text-primary cursor-pointer">Checkout</Link>
           </div>
         </div>
+        
 
         {/* Customer Support */}
         <div>
-          <h3 className="font-semibold mb-4">Customer Support</h3>
+          <h3 className="font-semibold flex flex-col gap-1 mb-4">Customer Support</h3>
           <div className="space-y-2 text-sm text-muted">
-            <a className="hover:text-primary cursor-pointer">Help Center</a>
-            <a className="hover:text-primary cursor-pointer">Returns</a>
-            <a className="hover:text-primary cursor-pointer">Shipping</a>
-            <a href="/privacy-policy" className="hover:text-primary cursor-pointer">
+            <Link className="hover:text-primary cursor-pointer">Help Center</Link>
+            <Link className="hover:text-primary cursor-pointer">Returns</Link>
+            <Link className="hover:text-primary cursor-pointer">Shipping</Link>
+            <Link to="/privacy-policy" className="hover:text-primary cursor-pointer">
               Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
 
