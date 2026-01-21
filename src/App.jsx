@@ -10,7 +10,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import ProductDetailLayout from "./layouts/ProductDetailLayout.jsx";
 import Footer from "./Pages/Footer.jsx";
-import SideManuContent from "./SideManulayouts/manucontent.jsx";
+import PrivacyPolicy from "./Pages/PolicyPage.jsx";
 function App() {
   return (
     <>
@@ -26,6 +26,7 @@ function App() {
           <Route path=":id" element={<ProductDetail />} />
           <Route path="Category/:name" element={<FilterItems />} />
         </Route>
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
