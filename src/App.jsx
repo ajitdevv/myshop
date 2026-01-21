@@ -11,6 +11,7 @@ import Home from "./Pages/Home.jsx";
 import ProductDetailLayout from "./layouts/ProductDetailLayout.jsx";
 import Footer from "./Pages/Footer.jsx";
 import PrivacyPolicy from "./Pages/PolicyPage.jsx";
+import About from "./Pages/AboutUs.jsx";
 function App() {
   return (
     <>
@@ -27,6 +28,7 @@ function App() {
           <Route path="Category/:name" element={<FilterItems />} />
         </Route>
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/aboutus" element={<About />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

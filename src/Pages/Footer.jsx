@@ -2,7 +2,7 @@ import { Buttonn } from "../Components/Button";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="bg-card w-full text-foreground border-t border-border">
+    <footer className="bg-card w-fulltext-foreground border-t border-border">
       {/* Top Section */}
       <div className="w-full mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
@@ -19,7 +19,7 @@ const Footer = () => {
         {/* Quick Links */}
         <div>
           <h3 className="font-semibold mb-4">Quick Links</h3>
-          <div className="space-y-2 flex flex-col gap-1 text-sm text-muted">
+          <div className="space-y-2 flex flex-col text-sm text-muted">
             <Link to="/" className="hover:text-primary cursor-pointer">
               Home
             </Link>
@@ -37,10 +37,10 @@ const Footer = () => {
 
         {/* Customer Support */}
         <div>
-          <h3 className="font-semibold flex flex-col gap-1 mb-4">
+          <h3 className="font-semibold mb-4">
             Customer Support
           </h3>
-          <div className="space-y-2 text-sm text-muted">
+          <div className="space-y-2 flex flex-col text-sm text-muted">
             <Link className="hover:text-primary cursor-pointer">
               Help Center
             </Link>

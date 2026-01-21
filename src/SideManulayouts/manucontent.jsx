@@ -75,7 +75,7 @@ const SideManuContent = ({ setisopen, open }) => {
           <Link to="/cart" onClick={() => setisopen(false)}>
             Cart
           </Link>
-          <Link to="/about" onClick={() => setisopen(false)}>
+          <Link to="/aboutus" onClick={() => setisopen(false)}>
             About
           </Link>
           <Link to="/terms&conditions" onClick={() => setisopen(false)}>

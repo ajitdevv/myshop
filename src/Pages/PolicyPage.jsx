@@ -1,7 +1,7 @@
 
 function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-background text-foreground px-4 py-10">
+    <div className="min-h-screen bg-background text-foreground px-4 py-15">
       <div className="mx-auto max-w-4xl rounded-2xl bg-card p-8 shadow-(--shadow) border border-border">
         <h1 className="text-3xl font-semibold mb-6">Privacy Policy</h1>
 
