@@ -1,17 +1,17 @@
-import {Link} from "react-router-dom"
+
 function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-background text-foreground px-4 py-10">
       <div className="mx-auto max-w-4xl rounded-2xl bg-card p-8 shadow-(--shadow) border border-border">
         <h1 className="text-3xl font-semibold mb-6">Privacy Policy</h1>
 
-        <p className="text-muted mb-6">Last Updated: DD/MM/YYYY</p>
+        <p className="text-muted mb-6">Last Updated: 12/21/2025</p>
 
         <section className="space-y-6 text-muted leading-relaxed">
           <p>
-            Welcome to{" "}
+            Welcome to
             <span className="font-medium text-foreground">
-              [Your Website Name]
+               🛍️MyShop
             </span>
             . We respect your privacy and are committed to protecting your
             personal information. This Privacy Policy explains how we collect,
@@ -117,9 +117,9 @@ function PrivacyPolicy() {
             Contact Us
           </h2>
           <p className="text-muted">
-            Email: your@email.com <br />
-            Phone: +91-XXXXXXXXXX <br />
-            Address: Your Business Address
+            Email: MyShop@email.com <br />
+            Phone: +91-9876543210 <br />
+            Address: Jaipur, Rajashtan
           </p>
         </div>
       </div>
