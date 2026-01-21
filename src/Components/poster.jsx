@@ -15,7 +15,7 @@ function Poster({ slides }) {
     return () => clearInterval(interval);
   }, [slides.length]);
   return (
-    <div className="mt-25 flex flex-col justify-center items-center">
+    <div className="mt-22 flex flex-col justify-center items-center">
       <div className="border-foreground relative h-76 md:h-96 lg:h-110 w-[90%] border-2 overflow-hidden rounded-lg">
         <div
           className="flex transition-transform duration-500"

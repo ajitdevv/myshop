@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { Buttonn } from "../Components/Button";
 import { Link } from "react-router-dom";
 const Footer = () => {
+  const [email, setemail] = useState("")
+  const handelSubmitMail =()=>{
+   setemail("")
+  }
   return (
     <footer className="bg-card w-fulltext-foreground border-t border-border">
       {/* Top Section */}
@@ -64,13 +69,15 @@ const Footer = () => {
 
           <div className="flex flex-col gap-2">
             <input
-              type="email"
+              type="text"
+              value={email}
+              onChange={(e)=>setemail(e.target.value)}
               placeholder="Enter your email"
               className="flex-1 px-3 py-2 rounded-lg bg-inner-card
                          border border-border outline-none
                          focus:ring-2 focus:ring-primary"
             />
-            <Buttonn text="Subscribe" className="px-4 bg-accent py-2" />
+            <Buttonn text="Subscribe" onClick={handelSubmitMail} className="px-4 bg-accent py-2" />
           </div>
         </div>
       </div>
