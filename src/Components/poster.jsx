@@ -31,7 +31,6 @@ function Poster({ slides }) {
             </div>
           ))}
         </div>
-
         <button
           onClick={prevSlide}
           className="absolute left-2 top-1/2 -translate-y-1/2 text-accent"

@@ -25,7 +25,7 @@ const OrderForm = () => {
     firstName: /^[A-Za-z\s]{2,}$/,
     lastName: /^[A-Za-z\s]{2,}$/,
     address: /^[A-Za-z0-9\s,.-/]{5,}$/,
-    mobile: /^[6-9]\d{10}$/,
+    mobile: /^[6-9]\d{9}$/,
     pincode: /^[1-9][0-9]{5}$/,
   };
 
